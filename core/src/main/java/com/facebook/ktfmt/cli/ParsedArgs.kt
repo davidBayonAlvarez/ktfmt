@@ -75,6 +75,7 @@ data class ParsedArgs(
         |  --meta-style                      Use 2-space block indenting (default)
         |  --google-style                    Google internal style (2 spaces)
         |  --kotlinlang-style                Kotlin language guidelines style (4 spaces)
+        |  --playtomic-style                 Playtomic style (4 spaces, 180 max width)
         |  --stdin-name=<name>               Name to report when formatting code from stdin
         |  --set-exit-if-changed             Sets exit code to 1 if any input file was not 
         |                                        formatted/touched
@@ -112,6 +113,7 @@ data class ParsedArgs(
           arg == "--meta-style" -> formattingOptions = Formatter.META_FORMAT
           arg == "--google-style" -> formattingOptions = Formatter.GOOGLE_FORMAT
           arg == "--kotlinlang-style" -> formattingOptions = Formatter.KOTLINLANG_FORMAT
+          arg == "--playtomic-style" -> formattingOptions = Formatter.PLAYTOMIC_FORMAT
           arg == "--dry-run" || arg == "-n" -> dryRun = true
           arg == "--set-exit-if-changed" -> setExitIfChanged = true
           arg == "--do-not-remove-unused-imports" -> removeUnusedImports = false

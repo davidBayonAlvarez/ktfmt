@@ -73,6 +73,12 @@ class ParsedArgsTest {
   }
 
   @Test
+  fun `parseOptions recognizes --playtomic-style`() {
+    val parsed = assertSucceeds(ParsedArgs.parseOptions(arrayOf("--playtomic-style", "foo.kt")))
+    assertThat(parsed.formattingOptions).isEqualTo(Formatter.PLAYTOMIC_FORMAT)
+  }
+
+  @Test
   fun `parseOptions recognizes --dry-run`() {
     val parsed = assertSucceeds(ParsedArgs.parseOptions(arrayOf("--dry-run", "foo.kt")))
     assertThat(parsed.dryRun).isTrue()
