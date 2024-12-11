@@ -43,6 +43,15 @@ import org.jetbrains.kotlin.psi.psiUtil.startOffset
 object Formatter {
 
   @JvmField
+  val PLAYTOMIC_FORMAT =
+      FormattingOptions(
+          blockIndent = 4,
+          continuationIndent = 4,
+          manageTrailingCommas = false,
+          maxWidth = 180,
+      )
+
+  @JvmField
   val META_FORMAT =
       FormattingOptions(
           blockIndent = 2,
