@@ -47,7 +47,7 @@ object Formatter {
       FormattingOptions(
           blockIndent = 4,
           continuationIndent = 4,
-          manageTrailingCommas = false,
+          manageTrailingCommas = true,
           maxWidth = 180,
       )
 
